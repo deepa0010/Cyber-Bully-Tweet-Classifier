@@ -40,33 +40,33 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.pipeline import Pipeline
 import pickle
 
-
+# %%
 df = pd.read_csv('cyberbullying_tweets.csv')
 
-
+# %%
 df.info()
 
-
+# %%
 df.head(10)
 
-
+# %%
 df.tail()
 
-
+# %%
 df.isnull().sum()
 
-
+# %%
 df['cyberbullying_type'].value_counts()
 
-
+# %%
 df = df.rename(columns={
     'tweet_text':'text','cyberbullying_type':'sentiment'
 })
 
-
+# %%
 df.head()
 
-
+# %%
 df['sentiment_encoded']=df['sentiment'].replace({
 'religion': 1,
 'age': 2,
@@ -76,16 +76,16 @@ df['sentiment_encoded']=df['sentiment'].replace({
 'not_cyberbullying':6
 })
 
-
+# %%
 df.tail(10)
-
+# %%
 
 nltk.download('punkt')
-
+# %%
 
 nltk.download('wordnet')
 
-
+# %%
 import nltk
 nltk.download('stopwords')
 
