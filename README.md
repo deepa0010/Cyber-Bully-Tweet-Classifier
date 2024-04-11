@@ -38,78 +38,35 @@ from sklearn.svm import SVC, LinearSVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.pipeline import Pipeline
-
-import pickle
-import warnings
-warnings.filterwarnings('ignore')
-import pandas as pd
-import numpy as np
-import re 
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px 
-import emoji
-import string
-import nltk
-
-# %%
-from PIL import Image
-from collections import Counter
-from wordcloud import WordCloud, ImageColorGenerator, STOPWORDS
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem.porter import PorterStemmer
-from nltk.stem.snowball import SnowballStemmer
-from nltk.stem import WordNetLemmatizer
-
-# %%
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
-
-
-# %%
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.svm import SVC, LinearSVC
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.pipeline import Pipeline
-
 import pickle
 
-# %%
+
 df = pd.read_csv('cyberbullying_tweets.csv')
 
-# %%
+
 df.info()
 
-# %%
+
 df.head(10)
 
-# %%
+
 df.tail()
 
-# %%
+
 df.isnull().sum()
 
-# %%
+
 df['cyberbullying_type'].value_counts()
 
-# %%
+
 df = df.rename(columns={
     'tweet_text':'text','cyberbullying_type':'sentiment'
 })
 
-# %%
+
 df.head()
 
-# %%
+
 df['sentiment_encoded']=df['sentiment'].replace({
 'religion': 1,
 'age': 2,
@@ -119,16 +76,16 @@ df['sentiment_encoded']=df['sentiment'].replace({
 'not_cyberbullying':6
 })
 
-# %%
+
 df.tail(10)
 
-# %%
+
 nltk.download('punkt')
 
-# %%
+
 nltk.download('wordnet')
 
-# %%
+
 import nltk
 nltk.download('stopwords')
 
