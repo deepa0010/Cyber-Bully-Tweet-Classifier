@@ -8,38 +8,67 @@ import warnings
 warnings.filterwarnings('ignore')
 
 import pandas as pd
+
 import numpy as np
+
 import re 
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns
+
 import plotly.express as px 
+
 import emoji
+
 import string
+
 import nltk
+
 from PIL import Image
+
 from collections import Counter
+
 from wordcloud import WordCloud, ImageColorGenerator, STOPWORDS
+
 from nltk.tokenize import word_tokenize
+
 from nltk.corpus import stopwords
+
 from nltk.stem.porter import PorterStemmer
+
 from nltk.stem.snowball import SnowballStemmer
+
 from nltk.stem import WordNetLemmatizer
 
 from sklearn.feature_extraction.text import CountVectorizer
+
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 from sklearn.model_selection import train_test_split
+
 from sklearn.model_selection import cross_val_score
+
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
+
 from sklearn.model_selection import GridSearchCV
+
 from sklearn.model_selection import RandomizedSearchCV
 
 from sklearn.linear_model import LogisticRegression
+
 from sklearn.ensemble import RandomForestClassifier
+
 from sklearn.ensemble import AdaBoostClassifier
+
 from sklearn.svm import SVC, LinearSVC
+
 from sklearn.naive_bayes import MultinomialNB
+
 from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.pipeline import Pipeline
+
 import pickle
 
 # %%
